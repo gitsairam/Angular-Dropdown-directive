@@ -1,8 +1,14 @@
-import { Directive, ElementRef } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { AfterViewInit, Directive, ElementRef, Inject } from '@angular/core';
 
 @Directive({
   selector: '[appClickOutside]',
 })
-export class ClickOutsideDirective {
-  constructor(private element: ElementRef) {}
+export class ClickOutsideDirective implements AfterViewInit {
+  constructor(
+    private element: ElementRef,
+    @Inject(DOCUMENT) document: Document
+  ) {}
+
+  ngAfterViewInit() {}
 }
