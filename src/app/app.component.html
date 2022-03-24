@@ -1,6 +1,6 @@
 <div class="menu-container">
-  <div class="menu-toggler">Menu Toggler</div>
-  <div class="menu">
+  <div class="menu-toggler" (click)="toggleMenu()">Menu Toggler</div>
+  <div class="menu" *ngIf="isMenuOpen">
     <div class="menu-item">News</div>
     <div class="menu-item">Contact</div>
     <div class="menu-item">About</div>
