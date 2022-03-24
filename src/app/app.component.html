@@ -1,4 +1,4 @@
-<div class="menu-container">
+<div class="menu-container" appClickOutside (clickOutside)="clickedOutside()">
   <div class="menu-toggler" (click)="toggleMenu()">Menu Toggler</div>
   <div class="menu" *ngIf="isMenuOpen">
     <div class="menu-item">News</div>

@@ -11,4 +11,7 @@ export class AppComponent {
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
+  clickedOutside() {
+    this.isMenuOpen = false;
+  }
 }
